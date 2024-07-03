@@ -1,0 +1,4 @@
+bokib 3 Q 1004 93 40 
+sakib 8 M 1003 34 30 
+rakib 1 E 1002 93 20 
+akib 2 R 1001 32 10 

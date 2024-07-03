@@ -1,0 +1,1 @@
+cout << b.unique_id << " " << b.name << " " << b.section << " " << b.total_marks << endl;
