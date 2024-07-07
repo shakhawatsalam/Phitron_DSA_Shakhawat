@@ -6,8 +6,8 @@ int main()
     cin >> s;
     // cout << s[5] << endl;
     // cout << s.at(5);
-    // cout << s[s.size() - 1] << endl;
+    cout << s[s.size() + 6] << endl;
     // cout << s.back();
-    cout << s.front();
+    // cout << s.front();
     return 0;
 }

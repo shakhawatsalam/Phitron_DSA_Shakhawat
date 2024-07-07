@@ -20,9 +20,9 @@ int main()
     // myList.erase(next(myList.begin(), 2), next(myList.begin(), 5)); // O(N);
     // replace(myList.begin(), myList.end(), 30, 100);
     // myList.remove(30);
-    // myList.sort();
+    myList.sort();
     // myList.reverse();
-    myList.unique(30);
+    myList.unique();
     for (int x : myList)
     {
         cout << x << " ";
