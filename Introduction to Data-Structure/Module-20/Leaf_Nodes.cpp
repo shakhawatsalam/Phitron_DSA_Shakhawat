@@ -3,10 +3,10 @@ using namespace std;
 class Node
 {
 public:
-    int val;
+    long long int val;
     Node *left;
     Node *right;
-    Node(int val)
+    Node(long long int val)
     {
         this->val = val;
         this->left = NULL;
@@ -16,7 +16,7 @@ public:
 
 Node *input_tree()
 {
-    int val;
+    long long int val;
     cin >> val;
     Node *root;
     if (val == -1)
@@ -29,11 +29,11 @@ Node *input_tree()
 
     while (!q.empty())
     {
-        // 1. ber kora ano
+
         Node *p = q.front();
         q.pop();
-        // 2. jabotyo ja kar achea
-        int l, r;
+
+        long long int l, r;
         cin >> l >> r;
         Node *left;
         Node *right;
@@ -49,7 +49,6 @@ Node *input_tree()
         p->left = left;
         p->right = right;
 
-        // 3. children gulo ke push koro
         if (p->left)
             q.push(p->left);
         if (p->right)
@@ -57,23 +56,35 @@ Node *input_tree()
     }
     return root;
 }
-// * Print tree
+
+vector<long long int> v;
+// void leaf_nodes(Node *root)
+// {
+//     if (root == NULL)
+//     {
+//         return;
+//     }
+//     if (root->left == NULL && root->right == NULL)
+//     {
+//         v.push_back(root->val);
+//     }
+//     leaf_nodes(root->left);
+//     leaf_nodes(root->right);
+// }
 void level_order(Node *root)
 {
-    if (root == NULL)
-        return;
     queue<Node *> q;
     q.push(root);
     while (!q.empty())
-    { // * Setp-> 1
-        // * লাইন থেকে বের করে আনা হল q.front() এর মাধ্যমে f ভেরিয়েবল এর মধ্যে রাখা হল। এবং q.pop() এর মাধম্যে লাইন থেকে বের করে আনা হল।
+    {
         Node *f = q.front();
         q.pop();
-        // * ‍Step -> 2
-        //* যাবতীয় যা কাজ আছে করা।
-        cout << f->val << " ";
-        // * ‍Step -> 3
-        //* children রাখা queue এর মধ্যে।
+
+        if (f->left == NULL && f->right == NULL)
+        {
+            v.push_back(f->val);
+        }
+
         if (f->left != NULL)
             q.push(f->left);
 
@@ -81,19 +92,22 @@ void level_order(Node *root)
             q.push(f->right);
     }
 }
-
-// int count(Node *root)
-// {
-//     if (root == NULL)
-//         return 0;
-//     int l = count(root->left);
-//     int r = count(root->right);
-//     return l + r + 1;
-// }
-
 int main()
 {
     Node *root = input_tree();
-    level_order(root);
-    return 0;
+    if (root)
+    {
+        level_order(root);
+        // leaf_nodes(root);
+    }
+    sort(v.begin(), v.end());
+    reverse(v.begin(), v.end());
+    if (!v.empty())
+    {
+
+        for (long long int x : v)
+        {
+            cout << x << " ";
+        }
+    }
 }
