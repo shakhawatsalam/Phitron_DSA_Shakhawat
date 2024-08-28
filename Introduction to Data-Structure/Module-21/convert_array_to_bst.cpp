@@ -51,16 +51,27 @@ void level_order(Node *root)
             q.push(f->right);
     }
 }
+void print_vector(vector<int> nums)
+{
+    for (int x : nums)
+    {
+        cout << x << " ";
+    }
+}
 int main()
 {
-    int n;
-    cin >> n;
-    int a[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    Node *root = convert(a, n, 0, n - 1);
-    level_order(root);
+    // int n;
+    // cin >> n;
+    // int a[n];
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> a[i];
+    // }
+    // Node *root = convert(a, n, 0, n - 1);
+    // level_order(root);
+    vector<int> nums = {10, 20, 30};
+    print_vector(nums);
+    // cout << nums.size() << endl;
+
     return 0;
 }
