@@ -14,7 +14,7 @@ public:
     }
 };
 
-Node *convert(int a[], int n, int l, int r)
+Node *convert(int a[], int l, int r)
 {
     if (l > r)
     {
@@ -23,8 +23,8 @@ Node *convert(int a[], int n, int l, int r)
 
     int mid = (l + r) / 2;
     Node *root = new Node(a[mid]);
-    Node *leftRoot = convert(a, n, l, mid - 1);
-    Node *rightRoot = convert(a, n, mid + 1, r);
+    Node *leftRoot = convert(a, l, mid - 1);
+    Node *rightRoot = convert(a, mid + 1, r);
     root->left = leftRoot;
     root->right = rightRoot;
     return root;
@@ -51,27 +51,27 @@ void level_order(Node *root)
             q.push(f->right);
     }
 }
-void print_vector(vector<int> nums)
+
+void in_order(Node *root)
 {
-    for (int x : nums)
-    {
-        cout << x << " ";
-    }
+    if (root == NULL)
+        return;
+    in_order(root->left);
+    cout << root->val << " ";
+    in_order(root->right);
 }
+
 int main()
 {
-    // int n;
-    // cin >> n;
-    // int a[n];
-    // for (int i = 0; i < n; i++)
-    // {
-    //     cin >> a[i];
-    // }
-    // Node *root = convert(a, n, 0, n - 1);
-    // level_order(root);
-    vector<int> nums = {10, 20, 30};
-    print_vector(nums);
-    // cout << nums.size() << endl;
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    Node *root = convert(a, 0, n - 1);
+    in_order(root);
 
     return 0;
 }

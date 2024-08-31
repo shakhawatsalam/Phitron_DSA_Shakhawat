@@ -89,10 +89,12 @@ int main()
         insert_heap(v, x);
     }
     delete_heap(v);
-    delete_heap(v);
+    // delete_heap(v);
+    int a = INT_MAX;
     for (int x : v)
     {
         cout << x << " ";
     }
     return 0;
 }
+

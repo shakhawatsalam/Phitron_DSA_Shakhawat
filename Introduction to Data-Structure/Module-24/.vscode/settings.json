@@ -1,0 +1,27 @@
+{
+  "files.associations": {
+    "*.tcc": "cpp",
+    "bitset": "cpp",
+    "vector": "cpp",
+    "memory": "cpp",
+    "optional": "cpp",
+    "string_view": "cpp",
+    "functional": "cpp",
+    "random": "cpp",
+    "future": "cpp",
+    "string": "cpp",
+    "system_error": "cpp",
+    "thread": "cpp",
+    "typeindex": "cpp",
+    "variant": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "chrono": "cpp",
+    "limits": "cpp",
+    "valarray": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
+  }
+}
