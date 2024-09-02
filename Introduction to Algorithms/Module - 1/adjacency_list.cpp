@@ -32,4 +32,5 @@ int main()
  * Setp - 4: Initialize a array of vector --> vector<int> arr[n];
  * Setp - 5: Push b into mat's a index and push b into mat's a index --> mat[a].push_back(b);  mat[b].push_back(a);
  * Step - 6: If we want to make directed graph we don't need to push mat[b].push_back(a);
+ * Step - 7 : for printing the result we can use range base for loop --> for(int x : mat[0]) { cout << x << " "};
  */
