@@ -48,16 +48,22 @@ int main()
     bfs(src);
     int x = des;
     vector<int> path;
+    int p = 0;
     while (x != -1)
     {
-        path.push_back(x);
+        // cout << x << " ";
         x = parent[x];
+        p++;
+
+        // path.push_back(x);
+        // x = parent[x];
     }
-    reverse(path.begin(), path.end());
-    for (int val : path)
-    {
-        cout << val << " ";
-    }
+    cout << p - 1 << " ";
+    // reverse(path.begin(), path.end());
+    // for (int val : path)
+    // {
+    //     cout << val << " ";
+    // }
     return 0;
 }
 
