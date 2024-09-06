@@ -20,7 +20,7 @@ void bfs(int src)
                 vis[child] = true;
             }
         }
-        }
+    }
 }
 int main()
 {
