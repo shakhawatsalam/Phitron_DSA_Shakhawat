@@ -8,7 +8,7 @@ int kanpsack(int n, int weight[], int value[], int W)
     {
         // duta option
         // niya dhekbo, na niye dekhbo
-        int op1 = kanpsack(n - 1, weight, value, W - weight[n]) + value[n]; 
+        int op1 = kanpsack(n - 1, weight, value, W - weight[n]) + value[n];
         int op2 = kanpsack(n - 1, weight, value, W);
 
         return max(op1, op2);
@@ -21,8 +21,8 @@ int kanpsack(int n, int weight[], int value[], int W)
 }
 int main()
 {
-    int n;
-    cin >> n;
+    int n, W;
+    cin >> n >> W;
     int weight[n], value[n];
     for (int i = 0; i < n; i++)
     {
@@ -32,8 +32,8 @@ int main()
     {
         cin >> value[i];
     }
-    int W;
-    cin >> W;
-    cout << kanpsack(n - 1, weight, value, W) << endl;
+    // int W;
+    // cin >> W;
+    cout << kanpsack(n, weight, value, W) << endl;
     return 0;
 }
