@@ -1,0 +1,3 @@
+6 6Possible
+0 8Impossible
+4 4Possible

@@ -1,13 +1,11 @@
 
 #include <stdio.h>
-
+#include <string.h>
 int main()
 
 {
-    long long int a, b;
-    scanf("%lld %lld", &a, &b);
-    long long int multiple = a * b;
-    printf("%lld", multiple);
+    int x = 10, y = 5;
+    printf("%d", x % y);
 }
 // 1 byte * 8 = 8 bit
 // 4 byte * 8 = 32 bit
