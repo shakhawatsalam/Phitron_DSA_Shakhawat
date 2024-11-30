@@ -1,1 +1,3 @@
-64,54,56,45,13,21,32,132
+numbers =[22,19,19,14,33]
+numbers.sort()
+print(numbers)
